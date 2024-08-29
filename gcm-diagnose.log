@@ -1,0 +1,154 @@
+﻿Diagnose log at 2024-08-02T02:11:12Z
+
+AppPath: /usr/local/bin/git-credential-manager
+InstallDir: /usr/local/share/gcm-core/
+Version: 2.5.1+986b0d54ee166e17a0a8d9c014e0109c057ead45
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Linux
+OSVersion: Arch Linux
+Reading environment variables... OK
+ Variables:
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+HOME=/home/cnervi
+LOGNAME=cnervi
+PWD=/home/cnervi/.config/nvim
+WAYLAND_DISPLAY=wayland-0
+SHLVL=1
+HOSTTYPE=x86_64
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/PowerShell/7:/mnt/c/Program Files/Python311/Scripts/:/mnt/c/Program Files/Python311/:/mnt/c/Program Files/Neovide/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/cnervi/scoop/apps/nircmd/current:/mnt/c/Users/cnervi/scoop/shims:/mnt/c/Users/cnervi/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Neovim/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+WSL2_GUI_APPS_ENABLED=1
+SHELL=/usr/bin/bash
+OLDPWD=/home/cnervi/.config
+XDG_RUNTIME_DIR=/run/user/1000/
+WT_PROFILE_ID={574e775e-4f2a-5b96-ac1e-a2962a402336}
+_=/usr/local/bin/git-credential-manager
+TERM=xterm-256color
+NAME=winterborn
+USER=cnervi
+DEBUGINFOD_URLS=https://debuginfod.archlinux.org 
+WSL_DISTRO_NAME=Arch
+DISPLAY=:0
+WSL_INTEROP=/run/WSL/23593_interop
+LANG=en_US.UTF-8
+GIT_TRACE2_PARENT_SID=8498c61b-b5ff-4afc-92d6-1dc9c6396ccc
+WSLENV=WT_SESSION:WT_PROFILE_ID:
+WT_SESSION=18cc4d31-ff10-452d-a908-de6ab3fa1018
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is '/tmp/'...
+Checking basic file I/O...
+Writing to temporary file '/tmp/2d344df6a55d145b4ab71474'... OK
+Reading from temporary file '/tmp/2d344df6a55d145b4ab71474'... OK
+Deleting temporary file '/tmp/2d344df6a55d145b4ab71474'... OK
+Testing IFileSystem instance...
+UserHomePath: /home/cnervi
+UserDataDirectoryPath: /home/cnervi/.gcm
+GetCurrentDirectory(): /home/cnervi/.config/nvim
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:36425/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.46.0'
+Locating current repository...Git repository at '/home/cnervi/.config/nvim/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:/home/cnervi/.gitconfig	user.email=c.nervi.p@gmail.com
+file:/home/cnervi/.gitconfig	user.name=Claudio Nervi
+file:/home/cnervi/.gitconfig	user.signingkey=7F332BD6A55BFE18
+file:/home/cnervi/.gitconfig	credential.helper=
+file:/home/cnervi/.gitconfig	credential.helper=
+file:/home/cnervi/.gitconfig	credential.helper=/usr/local/bin/git-credential-manager
+file:/home/cnervi/.gitconfig	credential.credentialstore=gpg
+file:/home/cnervi/.gitconfig	commit.gpgsign=true
+file:/home/cnervi/.gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.origin.url=https://github.com/cnervi/astronvim_config
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: False
+Exception:
+System.Exception: Password store has not been initialized at '/home/cnervi/.password-store'; run `pass init <gpg-id>` to initialize the store.
+See https://aka.ms/gcm/credstores for more information.
+   at GitCredentialManager.CredentialStore.ValidateGpgPass(String& storeRoot, String& execPath)
+   at GitCredentialManager.CredentialStore.EnsureBackingStore()
+   at GitCredentialManager.CredentialStore.Remove(String service, String account)
+   at GitCredentialManager.Diagnostics.CredentialStoreDiagnostic.RunInternalAsync(StringBuilder log, IList`1 additionalFiles)
+   at GitCredentialManager.Diagnostics.Diagnostic.RunAsync()
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential...Deleting test credential...
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: /home/cnervi/.local/.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: /home/cnervi/.local/.IdentityService/msal.cache
+KeyringCollection: 
+KeyringSchemaName: 
+KeyringSecretLabel: 
+KeyringAttribute1: (,)
+KeyringAttribute2: (,)
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+

@@ -8,7 +8,7 @@ return {
         {
           large_buf                = { size = 1024 * 256, lines = 10000 },
 
-          autopairs                = true,
+          autopairs                = false,
           cmp                      = true,
           highlighturl             = true,
           notifications            = true,
@@ -33,10 +33,10 @@ return {
               relativenumber       = false,
 
               cmdheight            = 1,
+
             },
-          g =
+          g                        =
             {
-              loaded_perl_provider = 0,
               loaded_ruby_provider = 0,
             },
         },
@@ -48,7 +48,7 @@ return {
             },
           x =
             {
-              ["<Leader><CR>"]     = { "<Plug>LiveEasyAlign", desc = "EasyAlign" },
+              ["<Leader><CR>"]     = { ":LiveEasyAlign<CR>", desc = "EasyAlign" },
             },
         },
     },
