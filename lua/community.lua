@@ -1,8 +1,6 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
-  { import = "astrocommunity.bars-and-lines.vim-illuminate" },
   { import = "astrocommunity.color.nvim-highlight-colors" },
   { import = "astrocommunity.colorscheme.nord-nvim" },
   { import = "astrocommunity.completion.cmp-cmdline" },
