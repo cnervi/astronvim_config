@@ -8,7 +8,7 @@ return {
         {
           large_buf                = { size = 1024 * 256, lines = 10000 },
 
-          autopairs                = false,
+          autopairs                = true,
           cmp                      = true,
           highlighturl             = true,
           notifications            = true,
@@ -23,7 +23,7 @@ return {
         {
           opt =
             {
-              guifont              = "Iosevka NFM:h12",
+              guifont              = "Iosevka NF:h12",
               signcolumn           = "yes",
 
               wrap                 = false,

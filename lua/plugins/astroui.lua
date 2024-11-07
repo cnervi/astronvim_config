@@ -5,6 +5,6 @@ return
     ---@type AstroUIOpts
     opts =
       {
-        colorscheme = "nord",
+        colorscheme = "onedark",
       },
   }

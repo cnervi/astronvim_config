@@ -5,22 +5,13 @@ return {
   opts = {
     features = {
       codelens = true,
-      inlay_hints = false,
+      inlay_hints = true,
       semantic_tokens = true,
     },
     formatting = {
       format_on_save = {
         enabled = false,
-        allow_filetypes = {},
-        ignore_filetypes = {},
       },
-      disabled = {},
     },
-    servers = {},
-    ---@diagnostic disable: missing-fields
-    config = {},
-    handlers = {},
-    autocmds = {},
   },
-  mappings = {},
 }
